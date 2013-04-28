@@ -132,7 +132,7 @@ def main():
         except ValueError:
             print('Error: Unknown time format ({0})'.format(args['bedtime']))
             return 1
-        except Exception, msg:
+        except Exception as msg:
             print('Error: {0}'.format(msg))
             return 1
     elif args['wakeup']:
@@ -142,13 +142,13 @@ def main():
         except ValueError:
             print('Error: Unknown time format ({0})'.format(args['bedtime']))
             return 1
-        except Exception, msg:
+        except Exception as msg:
             print('Error: {0}'.format(msg))
             return 1
     else:
         try:
             show_wakeups(NOW)
-        except Exception, msg:
+        except Exception as msg:
             print('Error: {0}'.format(msg))
             return 1
 
